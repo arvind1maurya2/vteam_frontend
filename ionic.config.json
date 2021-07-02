@@ -1,0 +1,8 @@
+{
+  "name": "vteam",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
