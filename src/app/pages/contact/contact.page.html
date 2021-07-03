@@ -1,0 +1,65 @@
+<ion-content [scrollEvents]="true" (ionScrollStart)="globals.scrollStart()" (ionScroll)="globals.scrolling($event)" (ionScrollEnd)="globals.scrollEnd()">
+  <!-- header code -->
+<app-header></app-header>
+<!-- contact form -->
+
+<section class="section-py-space landing_page_slider nbb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 form-group col-12">
+        <legend style="text-align: center;">
+        <h1 class="text-left">Contact Info</h1>
+        </legend>
+        <div class="form-group">
+          <label class="form-control-label" for="firstname">First Name</label>
+          <input class="form-control" id="ownername" placeholder="First Name" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-control-label" for="firstname">Last Name</label>
+          <input class="form-control" id="lastname" placeholder="Last Name" type="text">
+        </div>
+        <!-- form-group -->
+        
+        <div class="form-group">
+          <label class="form-control-label" for="emailaddress">Email address</label>
+          <input aria-describedby="emailHelp" class="form-control" id="owneremail" placeholder="Enter email" type="email">
+        </div>
+        <div class="form-group">
+          <label class="form-control-label" for="phone">Phone</label>
+          <input aria-describedby="phone" class="form-control" id="phone" placeholder="Phone" type="text">
+        </div>
+        <!-- form-group -->
+        <div class="form-group">
+          <label class="form-control-label" for="reasonforvisit">Message</label>
+          <textarea class="form-control" id="reasonforvisit" placeholder="Message" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </div>
+      <!-- fieldset -->
+      <div class="col-md-1"> &nbsp; </div>
+      <div class="col-md-5 col-12">
+        <legend style="text-align: center;">
+        <h1 class="text-left">Our Location</h1>
+        </legend>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7115.307769135813!2d80.95761892458378!3d26.91447758250719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s25%20Phoolbag%20Colony%20Kursi%20Road%2C%20Lucknow!5e0!3m2!1sen!2sin!4v1597160776497!5m2!1sen!2sin" frameborder="0"  width="100%" height="400" frameborder="0" 
+        allowfullscreen="" aria-hidden="false" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+
+        <h2 class="mb-4 mt-4">Address </h2>
+        <ul class="fa-ul mb-4 ml-0">
+          <li id="mail-address"> <i class="fa fa-envelope" aria-hidden="true"></i> info@vteam.com </li>
+          <li> <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;+91 8948-117-797 </li>
+          <li> <i class="fa fa-map-marker" aria-hidden="true"></i> 25, Phool Bagh Colony,Kursi Rd, Lucknow, Uttar Pradesh - 226026 </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End contact form -->
+  
+<!-- footer code-->
+<app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-content [scrollEvents]="true" (ionScrollStart)="globals.scrollStart()" (ionScroll)="globals.scrolling($event)" (ionScrollEnd)="globals.scrollEnd()">
+  <!-- header code -->
+  <app-header></app-header>
+  <div class="jumbotron card card-image demo-bg" style="overflow: auto;">
+    <div class="text-white text-center py-5 px-4">
+      <div class="col-sm-12 col-12 mx-8">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="align-middle br-1 ne">
+                <h1 class="text-white py-4" style="font-weight: normal;padding-bottom: 0rem !important;">Standard Version</h1>
+                <p class="mb-4 text-white f-16 " style="margin-bottom: 3.9rem !important;"> Super Quality Video Calling With Advanced Features </p>
+                <a routerLink='../standardvdo' class="btn btn-light">Start the Video</a> </div>
+            </div>
+            <div class="col-sm-6 nm">
+              <div class="align-middle ne">
+                <h1 class="text-white py-4" style="font-weight: normal;padding-bottom: 0rem !important;">Secured Version</h1>
+                <p class="mb-4 text-white f-16 nbbb" style="margin-bottom: 3.9rem !important;"> Fully Secure, End to End Encrypted Using Proprietary Algorithm </p>
+                <a routerLink='../standardvdo' class="btn btn-light">Start the Video</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- footer code-->
+  <app-footer></app-footer>
+</ion-content>
