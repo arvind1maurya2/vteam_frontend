@@ -91,7 +91,13 @@
   }
   header{
     .landing-header{
-    
+      &.fixed{
+        .navbar-collapse{
+          .navbar-nav{
+            margin-left: 10px;
+          }
+        }
+      }
       .navbar-collapse{
         .navbar-nav{
           background-color: $primary-color;
@@ -2487,10 +2493,10 @@ footer {
       .videocall{
         &.call-modal{
           .small-image{
-            width: 180px;
-            height: 180px;
-            bottom: 15%;
-            display: none;
+            width: 100px;
+            height: 120px;
+            bottom: 31%;
+            display: none  !important;
           }
         }
       }
@@ -3053,7 +3059,7 @@ header {
 
 
     // vido call lable //
-    .videodialog  {
+    .viddiolog  {
       &.modal {
         &.fade  {
           .modal-dialog {
