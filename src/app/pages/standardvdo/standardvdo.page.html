@@ -1,0 +1,80 @@
+<ion-content [scrollEvents]="true" (ionScrollStart)="globals.scrollStart()" (ionScroll)="globals.scrolling($event)" (ionScrollEnd)="globals.scrollEnd()">
+  <!-- header code -->
+  <app-header></app-header>
+  <!-- Videocall New Modal Popup-->
+  <div class="videodialog modal fade" id="videocall" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document" id="video">
+        <div class="overlay"></div>
+        <div class="modal-body" id="videos">
+          <div class="videocall call-modal conf-bg" id="videoremote1">
+            <div> <img class="bg-img new" src="assets/images/landing-page/slicing/v.png" alt="Avatar"/> </div>
+            <div class="small-image" id="videolocal">
+              
+              <video class="centered localvideo bg-img locall-bg" id="myvideo" width="10%" height="0%" autoplay playsinline muted="muted" alt="Local Stream"></video>
+            
+            </div>
+            <div class="media videocall-details" style="background-color: #2196f3; opacity: 60%; height: 60px;">
+              <source src="assets/images/about/v.mp4" type="video/mp4">
+              <div class="usersprof">
+                <div class="profile"><img class="bg-img" src="assets/images/favicon/favicon.png" alt="VTeam"/></div>
+              </div>
+              <div class="media-body">
+                <h4 style="color:white">VTeam:: Securing Your Communication</h4>
+              </div>
+              <div id="basicUsage" style="color:white">00:00:00</div>
+              <div class="zoomcontent"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()" data-tippy-content="Zoom Screen"><img src="assets/images/logo/maximize.svg" alt="zoom screen"/></a></div>
+            </div>
+            <div class="center-con text-center">
+              <ul>
+                <li><a class="icon-btn btn-light button-effect pause" href="#" data-tippy-content="Hold"><i class="ti-control-pause"></i></a></li>
+                <li><a class="icon-btn btn-danger button-effect btn-xl is-animating" href="#" data-dismiss="modal" data-tippy-content="Hangup" (click)="stopVideoCall()"> <i data-feather="phone"></i></a></li>
+                <li><a class="icon-btn btn-light button-effect mic" href="#" data-tippy-content="Mute"><i class="fa fa-microphone"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Videocall-New-->
+    
+    <section class="section-py-space landing_page_slider nbb bn">
+      <div class="container">
+        <div class="row">
+          <fieldset class="col-md-12 form-group col-12" id="video">
+            <legend>Standard Video</legend>
+            <div class="form-group">
+              <label for="bitrate">Bandwidth</label>
+              <select class="form-control" id="bitrate">
+                <option value = "128"> Poor Bandwidth</option>
+                <option value = "256" > Low Bandwidth </option>
+                <option value = "512" selected> Standard Quality </option>
+                <option value = "1024"> High Quality </option >
+                <option value = "2048"> Ultra High Quality </option>
+                <option value = "0"> Best Quality </option>
+              </select>
+            </div>
+            <!--step-2-->
+            <div class="form-group">
+              <label for="username">Your display name</label>
+              <input autocomplete="off" class="form-control" type="text" value="Guest User" id="username" onkeypress="return checkEnter(this, event);"/>
+            </div>
+            <!--End step-2--> 
+            
+            <!--step-3-->
+            <div class="form-group">
+              <label for="room">Select Room</label>
+              <select class="form-control" id="room">
+                <option>Select Room</option>
+              </select>
+            </div>
+            <!--End Step-3-->
+            <button class="btn btn-default" autocomplete="on" id="startVideo" data-tippy-content="Quick Video Call" disabled="true" data-dismiss="modal" data-toggle="modal" data-target="#videocall" (click)="startVideoCall()">Start the Video</button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <!-- End contact form -->
+  
+  <!-- footer code-->
+  <app-footer></app-footer>
+</ion-content>
